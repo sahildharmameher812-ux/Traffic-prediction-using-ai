@@ -1,0 +1,122 @@
+.weather-input-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  align-items: end;
+  margin-bottom: 20px;
+}
+
+.weather-input-wrap { flex: 1; }
+
+.weather-btn { padding: 14px 28px; white-space: nowrap; }
+.weather-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none !important; }
+
+.city-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.city-chip {
+  padding: 7px 16px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  color: var(--text-secondary);
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.city-chip:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+  background: var(--orange-glow);
+}
+
+/* ── Results ── */
+.weather-results { display: flex; flex-direction: column; gap: 16px; margin-top: 8px; }
+
+.weather-main-card {
+  padding: 36px;
+  background: linear-gradient(135deg, var(--bg-card), var(--bg-elevated));
+  border-color: var(--orange-border);
+}
+
+.wmc-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.wmc-city {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.wmc-desc {
+  font-size: 16px;
+  color: var(--text-secondary);
+  text-transform: capitalize;
+}
+
+.weather-icon-img {
+  width: 80px; height: 80px;
+  filter: drop-shadow(0 0 12px rgba(255,107,43,0.3));
+}
+
+.wmc-temp {
+  font-family: var(--font-display);
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 8px;
+  letter-spacing: -2px;
+}
+
+.wmc-feels {
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+.weather-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.wdc {
+  text-align: center;
+  padding: 24px 16px;
+}
+
+.wdc-icon { font-size: 28px; margin-bottom: 10px; }
+
+.wdc-label {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.wdc-value {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--orange);
+}
+
+@media (max-width: 600px) {
+  .weather-input-row { grid-template-columns: 1fr; }
+  .weather-details-grid { grid-template-columns: 1fr; }
+  .wmc-temp { font-size: 56px; }
+}

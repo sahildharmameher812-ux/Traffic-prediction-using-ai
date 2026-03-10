@@ -1,0 +1,160 @@
+.about-mission {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  margin-bottom: 52px;
+  padding: 32px;
+  border-color: var(--orange-border);
+  background: linear-gradient(135deg, var(--bg-card), var(--bg-elevated));
+}
+
+.mission-icon {
+  font-size: 48px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 12px rgba(255,107,43,0.3));
+}
+
+.about-mission h2 {
+  font-size: 22px;
+  color: var(--orange);
+  margin-bottom: 12px;
+}
+
+.about-mission p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* ── Sections ── */
+.about-section { margin-bottom: 52px; }
+
+.about-section-title {
+  font-size: 24px;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── Team ── */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.team-card {
+  text-align: center;
+  padding: 28px 20px;
+}
+
+.team-emoji {
+  font-size: 36px;
+  margin-bottom: 14px;
+}
+
+.team-name {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.team-role {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+
+.team-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ── Tech Stack ── */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.tech-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+}
+
+.tech-icon { font-size: 24px; flex-shrink: 0; }
+
+.tech-name {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 3px;
+}
+
+.tech-desc {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* ── Hackathon Banner ── */
+.hackathon-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 36px 40px;
+  border-color: var(--orange-border);
+  background: linear-gradient(135deg, var(--bg-elevated), var(--bg-card));
+}
+
+.hb-tag {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--orange);
+  background: var(--orange-glow);
+  padding: 4px 12px;
+  border-radius: 100px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.hb-left h3 {
+  font-size: 24px;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.hb-left p {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.hb-trophy {
+  font-size: 64px;
+  filter: drop-shadow(0 0 24px rgba(255,107,43,0.4));
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+@media (max-width: 900px) {
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .tech-grid  { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .team-grid { grid-template-columns: 1fr 1fr; }
+  .about-mission { flex-direction: column; }
+  .hackathon-banner { flex-direction: column; gap: 20px; text-align: center; }
+}
