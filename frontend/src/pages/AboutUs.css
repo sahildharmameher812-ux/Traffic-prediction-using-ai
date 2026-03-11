@@ -1,44 +1,56 @@
+/* ── Mission ─────────────────────────────── */
 .about-mission {
   display: flex;
   gap: 24px;
   align-items: flex-start;
-  margin-bottom: 52px;
+  margin-bottom: 48px;
+  background: rgba(255,255,255,0.80);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,107,43,0.18) !important;
   padding: 32px;
-  border-color: var(--orange-border);
-  background: linear-gradient(135deg, var(--bg-card), var(--bg-elevated));
 }
 
 .mission-icon {
-  font-size: 48px;
+  width: 52px;
+  height: 52px;
+  background: var(--orange-glow);
+  border: 1px solid var(--orange-border);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
-  filter: drop-shadow(0 0 12px rgba(255,107,43,0.3));
 }
 
 .about-mission h2 {
-  font-size: 22px;
-  color: var(--orange);
-  margin-bottom: 12px;
+  font-size: 20px;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  font-family: var(--font-display);
 }
 
 .about-mission p {
   font-size: 15px;
   color: var(--text-secondary);
-  line-height: 1.8;
-  font-weight: 300;
+  line-height: 1.75;
+  font-weight: 400;
 }
 
-/* ── Sections ── */
-.about-section { margin-bottom: 52px; }
+/* ── Sections ────────────────────────────── */
+.about-section {
+  margin-bottom: 48px;
+}
 
 .about-section-title {
-  font-size: 24px;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
   color: var(--text-primary);
-  margin-bottom: 24px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid var(--border);
+  margin-bottom: 20px;
+  letter-spacing: -0.3px;
 }
 
-/* ── Team ── */
+/* ── Team Grid ───────────────────────────── */
 .team-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -48,113 +60,164 @@
 .team-card {
   text-align: center;
   padding: 28px 20px;
+  background: rgba(255,255,255,0.78);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+
+.team-card:hover {
+  border-color: var(--orange-border);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 32px rgba(255,107,43,0.10);
 }
 
 .team-emoji {
-  font-size: 36px;
-  margin-bottom: 14px;
+  font-size: 32px;
+  width: 60px;
+  height: 60px;
+  background: var(--orange-glow);
+  border: 1px solid var(--orange-border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
 }
 
 .team-name {
   font-family: var(--font-display);
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--text-primary);
-  margin-bottom: 6px;
+  line-height: 1.2;
 }
 
 .team-role {
   font-family: var(--font-display);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--orange);
-  margin-bottom: 10px;
 }
 
 .team-desc {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text-muted);
   line-height: 1.5;
+  text-align: center;
 }
 
-/* ── Tech Stack ── */
+/* ── Tech Grid ───────────────────────────── */
 .tech-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
+  gap: 12px;
 }
 
 .tech-card {
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: 18px 20px;
+  padding: 16px 18px;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0,0,0,0.07);
+  transition: var(--transition);
 }
 
-.tech-icon { font-size: 24px; flex-shrink: 0; }
+.tech-card:hover {
+  border-color: var(--orange-border);
+  background: rgba(255,255,255,0.95);
+}
+
+.tech-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+}
 
 .tech-name {
   font-family: var(--font-display);
   font-size: 13px;
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 }
 
 .tech-desc {
   font-size: 11px;
   color: var(--text-muted);
+  font-weight: 500;
 }
 
-/* ── Hackathon Banner ── */
+/* ── Hackathon Banner ────────────────────── */
 .hackathon-banner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 36px 40px;
-  border-color: var(--orange-border);
-  background: linear-gradient(135deg, var(--bg-elevated), var(--bg-card));
+  padding: 32px 36px;
+  background: rgba(255,255,255,0.80);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,107,43,0.20) !important;
+  margin-top: 8px;
 }
+
+.hb-left { display: flex; flex-direction: column; gap: 6px; }
 
 .hb-tag {
   font-family: var(--font-display);
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 700;
   letter-spacing: 3px;
+  text-transform: uppercase;
   color: var(--orange);
   background: var(--orange-glow);
-  padding: 4px 12px;
+  border: 1px solid var(--orange-border);
+  padding: 3px 10px;
   border-radius: 100px;
-  display: inline-block;
-  margin-bottom: 12px;
+  width: fit-content;
 }
 
 .hb-left h3 {
-  font-size: 24px;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
   color: var(--text-primary);
-  margin-bottom: 6px;
+  letter-spacing: -0.3px;
 }
 
 .hb-left p {
-  font-size: 14px;
-  color: var(--text-secondary);
+  font-size: 13px;
+  color: var(--text-muted);
 }
 
-.hb-trophy {
-  font-size: 64px;
-  filter: drop-shadow(0 0 24px rgba(255,107,43,0.4));
-  animation: pulse 2.5s ease-in-out infinite;
+.hb-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--orange-glow);
+  border: 1px solid var(--orange-border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
+/* ── Responsive ──────────────────────────── */
 @media (max-width: 900px) {
   .team-grid { grid-template-columns: repeat(2, 1fr); }
   .tech-grid  { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 600px) {
-  .team-grid { grid-template-columns: 1fr 1fr; }
   .about-mission { flex-direction: column; }
+  .team-grid { grid-template-columns: 1fr 1fr; }
+  .tech-grid  { grid-template-columns: 1fr 1fr; }
   .hackathon-banner { flex-direction: column; gap: 20px; text-align: center; }
+  .hb-tag { margin: 0 auto; }
 }

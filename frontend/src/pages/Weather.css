@@ -19,8 +19,8 @@
 
 .city-chip {
   padding: 7px 16px;
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.70);
+  border: 1px solid rgba(0,0,0,0.08);
   border-radius: 100px;
   color: var(--text-secondary);
   font-family: var(--font-display);
@@ -41,8 +41,9 @@
 
 .weather-main-card {
   padding: 36px;
-  background: linear-gradient(135deg, var(--bg-card), var(--bg-elevated));
-  border-color: var(--orange-border);
+  background: rgba(255,255,255,0.80);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,107,43,0.18);
 }
 
 .wmc-top {
@@ -68,7 +69,7 @@
 
 .weather-icon-img {
   width: 80px; height: 80px;
-  filter: drop-shadow(0 0 12px rgba(255,107,43,0.3));
+  filter: drop-shadow(0 0 12px rgba(255,107,43,0.25));
 }
 
 .wmc-temp {
@@ -94,6 +95,9 @@
 .wdc {
   text-align: center;
   padding: 24px 16px;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0,0,0,0.07);
 }
 
 .wdc-icon { font-size: 28px; margin-bottom: 10px; }

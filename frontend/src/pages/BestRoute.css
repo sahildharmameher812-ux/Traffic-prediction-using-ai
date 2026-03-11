@@ -19,11 +19,11 @@
 .swap-line {
   flex: 1;
   width: 1px;
-  background: var(--border);
+  background: rgba(0,0,0,0.10);
 }
 
 .swap-btn {
-  background: var(--bg-surface);
+  background: rgba(255,255,255,0.80);
   border: 1px solid var(--orange-border);
   color: var(--orange);
   width: 40px; height: 40px;
@@ -36,7 +36,7 @@
 
 .swap-btn:hover {
   background: var(--orange-glow);
-  box-shadow: 0 0 12px rgba(255,107,43,0.2);
+  box-shadow: 0 0 12px rgba(255,107,43,0.15);
 }
 
 .route-btn { width: 100%; padding: 18px; font-size: 16px; }
@@ -53,6 +53,9 @@
 .rscard {
   text-align: center;
   padding: 24px 16px;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0,0,0,0.07);
 }
 
 .rscard-icon { font-size: 24px; margin-bottom: 10px; }
@@ -75,33 +78,39 @@
 }
 
 /* ── Steps ── */
-.route-steps-card { padding: 28px; }
+.route-steps-card {
+  padding: 28px;
+  background: rgba(255,255,255,0.80);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0,0,0,0.07);
+}
 
 .steps-title {
   font-size: 18px;
   color: var(--text-primary);
   margin-bottom: 24px;
   padding-bottom: 16px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(0,0,0,0.07);
 }
 
-.steps-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
+.steps-list { display: flex; flex-direction: column; gap: 0; }
 
 .step-item {
   display: flex;
   gap: 16px;
   align-items: flex-start;
   padding: 16px 0;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
   transition: var(--transition);
 }
 
 .step-item:last-child { border-bottom: none; }
-.step-item:hover { background: var(--bg-elevated); margin: 0 -8px; padding: 16px 8px; border-radius: var(--radius-sm); }
+.step-item:hover {
+  background: rgba(255,107,43,0.04);
+  margin: 0 -8px;
+  padding: 16px 8px;
+  border-radius: var(--radius-sm);
+}
 
 .step-num {
   width: 32px; height: 32px;
