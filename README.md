@@ -1,4 +1,4 @@
-#  AI-Driven Predictive Urban Navigation & Mobility Optimization System
+# 🏆 Urban Nav — AI-Driven Predictive Urban Navigation & Mobility Optimization System
 
 > **Horizon 1.0 Hackathon** | Vidyavardhini College of Engineering & Technology, Palghar  
 > **Domain:** AI / ML
@@ -91,6 +91,48 @@ And the system automatically provides:
 | 2 | **Departure Planner** | Random Forest Classifier | Suggests optimal departure time based on congestion patterns | `departure_rf_model.pkl` |
 | 3 | **Parking Intelligence** | XGBoost Classifier | Predicts parking availability at destination | `parking_xgboost_model.pkl` |
 | 4 | **User Behavior** | Random Forest Classifier | Recommends best transport mode based on travel habits | `user_behavior_rf_model.pkl` |
+
+
+---
+
+## 🔨 Models — Built From Scratch
+
+> ✅ All ML models in this project are **built completely from scratch**.
+> ❌ No pre-trained models used.
+> ❌ No transfer learning or fine-tuning.
+> ✅ Custom architecture designed specifically for Mumbai urban navigation.
+
+### What "Built From Scratch" Means:
+| Aspect | Detail |
+|--------|--------|
+| **Architecture** | Designed by us — 2 LSTM layers + Dropout + Dense |
+| **Weights** | Randomly initialized, trained from zero |
+| **Training Data** | Our own Mumbai-specific synthetic dataset |
+| **Pre-trained weights** | None used |
+| **Transfer Learning** | Not applied |
+| **Fine-tuning** | Not applicable — trained fresh |
+
+### Why Built From Scratch?
+```
+Pre-trained models (like transformers) were:
+❌ Too heavy for real-time deployment
+❌ Trained on generic global data
+❌ Caused system lag and slow predictions
+
+Our custom models are:
+✅ Lightweight and fast
+✅ Trained specifically on Mumbai traffic patterns
+✅ Domain-specific — more accurate for our use case
+✅ Easy to retrain with new data
+```
+
+### Training Summary:
+| Model | Training Data | Epochs/Estimators | Training Platform |
+|-------|--------------|-------------------|-------------------|
+| LSTM (Traffic) | 48,000 rows | 10 epochs | Google Colab |
+| Random Forest (Departure) | 20,000 rows | 100 estimators | Google Colab |
+| XGBoost (Parking) | 35,000 rows | 100 estimators | Google Colab |
+| Random Forest (User) | 40,000 rows | 100 estimators | Google Colab |
 
 ---
 
@@ -301,7 +343,7 @@ Real Mumbai traffic data is not publicly available (paid APIs like Google Maps, 
 ## 📁 Project Structure
 
 ```
-Winner/
+UrbanNav/
 │
 ├── backend/
 │   ├── models/
@@ -329,8 +371,8 @@ Winner/
 
 ### Step 1 — Clone the repository
 ```bash
-git clone https://github.com/yourusername/Winner.git
-cd Winner/backend
+git clone https://github.com/yourusername/UrbanNav.git
+cd UrbanNav/backend
 ```
 
 ### Step 2 — Install dependencies
@@ -351,7 +393,7 @@ Loading models...
 
 ### Step 4 — Open the frontend
 ```
-Open Winner/frontend/index.html in your browser
+Open UrbanNav/frontend/index.html in your browser
 ```
 
 ### Step 5 — Use the app
